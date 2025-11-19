@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Cún & Miu</title>
+    <title>Giỏ Hàng Của Bạn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Giỏ hàng của bạn</h1>
-    <div class="cart-container">
-        <table>
+    <div class="container">
+        <h1>Giỏ Hàng Của Bạn</h1>
+        
+        <table class="cart-table">
             <thead>
                 <tr>
                     <th>STT</th>
@@ -16,37 +18,55 @@
                     <th>Tên sản phẩm</th>
                     <th>Giá</th>
                     <th>Số lượng</th>
-                    <th>Xoá</th>
+                    <th>Xóa</th>
                 </tr>
             </thead>
-            <tbody id="cart-body">
-                <tr>
+            <tbody>
+                <tr class="row-1">
                     <td>1</td>
-                    <td><img src="dog.jpg" class="product-img"></td>
-                    <td>Chó Poodle</td>
-                    <td>500.000</td>
                     <td>
-                        <button class="minus">-</button>
-                        <input type="number" value="1" class="qty" min="1">
-                        <button class="plus">+</button>
+                        <img src="dog.jpg" alt="Bát ăn" class="product-image">
                     </td>
-                    <td><button class="delete">X</button></td>
+                    <td>Chó</td>
+                    <td class="price">700.000₫</td>
+                    <td>
+                        <div class="quantity-control">
+                            <button class="btn-quantity btn-minus" onclick="changeQuantity(0, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" onchange="updateQuantity(0, this.value)">
+                            <button class="btn-quantity btn-plus" onclick="changeQuantity(0, 1)">+</button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-delete" onclick="removeItem(0)">Xóa</button>
+                    </td>
                 </tr>
-                                <tr>
+                <tr class="row-2">
                     <td>2</td>
-                    <td><img src="cat.jpg" class="product-img"></td>
-                    <td>Mèo Anh Lông Ngắn</td>
-                    <td>700.000</td>
                     <td>
-                        <button class="minus">-</button>
-                        <input type="number" value="1" class="qty" min="1">
-                        <button class="plus">+</button>
+                        <img src="cat.jpg" alt="Áo thần tài" class="product-image">
                     </td>
-                    <td><button class="delete">X</button></td>
+                    <td>Mèo</td>
+                    <td class="price">1.000.000₫</td>
+                    <td>
+                        <div class="quantity-control">
+                            <button class="btn-quantity btn-minus" onclick="changeQuantity(1, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" onchange="updateQuantity(1, this.value)">
+                            <button class="btn-quantity btn-plus" onclick="changeQuantity(1, 1)">+</button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-delete" onclick="removeItem(1)">Xóa</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
         
+        <div class="checkout-container">
+            <button class="btn-checkout" onclick="checkout()">Thanh Toán</button>
+        </div>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
+
