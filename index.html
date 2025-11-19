@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Cún & Miu</title>
+</head>
+<body>
+    <h1>Giỏ hàng của bạn</h1>
+    <div class="cart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Xoá</th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+                <tr>
+                    <td>1</td>
+                    <td><img src="dog.jpg" class="product-img"></td>
+                    <td>Chó Poodle</td>
+                    <td>500.000</td>
+                    <td>
+                        <button class="minus">-</button>
+                        <input type="number" value="1" class="qty" min="1">
+                        <button class="plus">+</button>
+                    </td>
+                    <td><button class="delete">X</button></td>
+                </tr>
+                                <tr>
+                    <td>2</td>
+                    <td><img src="cat.jpg" class="product-img"></td>
+                    <td>Mèo Anh Lông Ngắn</td>
+                    <td>700.000</td>
+                    <td>
+                        <button class="minus">-</button>
+                        <input type="number" value="1" class="qty" min="1">
+                        <button class="plus">+</button>
+                    </td>
+                    <td><button class="delete">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</body>
+</html>
